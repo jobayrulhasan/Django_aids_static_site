@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>contact</title>
-  </head>
-  <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-  </body>
-</html>
+{%extends 'common_code/base.html'%} 
+{%block title%}Contact{%endblock title%}
+
+{%block content%} 
+
+<!-- Contact Info and Form -->
+<section class="container my-5">
+    <div class="row g-5">
+        <!-- Contact Information -->
+        <div class="col-md-5">
+            <h3 class="mb-4">Get In Touch</h3>
+            <p><strong>Address:</strong> 123 Main Street, Your City, Your Country</p>
+            <p><strong>Email:</strong> info@example.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Business Hours:</strong> Mon - Fri: 9:00 AM - 6:00 PM</p>
+
+            <h5 class="mt-4">Follow Us</h5>
+            <a href="#" class="btn btn-outline-dark btn-sm me-2">Facebook</a>
+            <a href="#" class="btn btn-outline-dark btn-sm me-2">Twitter</a>
+            <a href="#" class="btn btn-outline-dark btn-sm">LinkedIn</a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-7">
+            <h3 class="mb-4">Send Us a Message</h3>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Your Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Your Message</label>
+                    <textarea class="form-control" rows="5" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{%endblock content%}
+

@@ -1,10 +1,80 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>home</title>
-  </head>
-  <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-  </body>
-</html>
+{%extends 'common_code/base.html'%} 
+{%block title%}Home{%endblock title%}
+
+{%block content%} 
+    <section class="container my-5">
+    <h2 class="text-center mb-4">Explore Our Sections</h2>
+
+    <!-- First Group of 3 Cards -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/600x300" class="card-img-top" alt="Blog Post">
+                <div class="card-body">
+                    <h5 class="card-title">Latest Blog</h5>
+                    <p class="card-text">Read our latest insights and articles on technology and trends.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 text-center p-4">
+                <div class="card-body">
+                    <h5 class="card-title">Our Portfolio</h5>
+                    <p class="card-text">Discover the projects we have proudly delivered to our clients.</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 text-center p-4">
+                <div class="card-body">
+                    <h5 class="card-title">Our Services</h5>
+                    <p class="card-text">We provide web development, design, and marketing solutions.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Group of 3 Cards -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+            <div class="card h-100 text-center p-4">
+                <div class="card-body">
+                    <h5 class="card-title">Testimonials</h5>
+                    <p class="card-text">See what our satisfied clients say about working with us.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm">View Feedback</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 text-center p-4">
+                <div class="card-body">
+                    <h5 class="card-title">Meet the Team</h5>
+                    <p class="card-text">Get to know the talented people who power our company.</p>
+                    <a href="#" class="btn btn-outline-info btn-sm">Our Team</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 text-center p-4">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">Have questions? Let's connect and discuss your ideas.</p>
+                    <a href="#" class="btn btn-outline-warning btn-sm">Contact</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{%endblock content%}
+

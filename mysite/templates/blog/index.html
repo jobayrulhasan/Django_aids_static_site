@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>blog</title>
-  </head>
-  <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-  </body>
-</html>
+{%extends 'common_code/base.html'%} 
+{%block title%}Blog{%endblock title%}
+
+{%block content%} 
+    <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">The Future of Web Design</h5>
+                    <p class="card-text">Explore how design trends are shaping the future of websites in 2025 and beyond.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Boost Your SEO in 2025</h5>
+                    <p class="card-text">Learn practical strategies to enhance your website's visibility and search engine ranking.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Mastering JavaScript</h5>
+                    <p class="card-text">A comprehensive guide for developers to sharpen their JavaScript skills for modern projects.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}
+
