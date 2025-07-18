@@ -1,44 +1,61 @@
 {%extends 'common_code/base.html'%} 
+{% load static %}
 {%block title%}About{%endblock title%}
 
 {%block content%} 
-    <div class="container my-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <section class="container my-5">
+        <div class="row g-5">
+            <div class="col-md-6">
+                <h2>Who We Are</h2>
+                <p class="text-justify">
+                    XYZ Company is a leading provider of innovative solutions in the fields of technology, business consulting, and digital transformation. Established in 2010, we have consistently delivered value to our clients through our commitment to quality, expertise, and forward-thinking strategies.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2>Our Mission</h2>
+                <p class="text-justify">
+                    Our mission is to empower businesses with cutting-edge technologies and tailor-made solutions that drive sustainable growth and operational excellence. We aim to build long-term relationships by delivering results that exceed expectations.
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 1">
-                <div class="card-body">
-                    <h5 class="card-title">The Future of Web Design</h5>
-                    <p class="card-text">Explore how design trends are shaping the future of websites in 2025 and beyond.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Core Values</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h5>Integrity</h5>
+                    <p>We believe in honesty, transparency, and doing the right thing — always.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Innovation</h5>
+                    <p>We embrace change and continuously seek better ways to deliver value to our clients.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Excellence</h5>
+                    <p>We strive for excellence in everything we do, from services to customer experience.</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">Boost Your SEO in 2025</h5>
-                    <p class="card-text">Learn practical strategies to enhance your website's visibility and search engine ranking.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
-                </div>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Why Choose Us?</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">✅ 10+ Years of Industry Experience</li>
+                    <li class="list-group-item">✅ Highly Skilled & Professional Team</li>
+                    <li class="list-group-item">✅ Proven Track Record of Success</li>
+                    <li class="list-group-item">✅ Customer-Centric Approach</li>
+                    <li class="list-group-item">✅ Comprehensive End-to-End Solutions</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="{%static 'images/xyz.jpg'%}" class="img-fluid rounded shadow" alt="Company Image">
             </div>
         </div>
-
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 3">
-                <div class="card-body">
-                    <h5 class="card-title">Mastering JavaScript</h5>
-                    <p class="card-text">A comprehensive guide for developers to sharpen their JavaScript skills for modern projects.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
+    </section>
 {%endblock content%}
 

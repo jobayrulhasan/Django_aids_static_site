@@ -1,4 +1,6 @@
+
 {%extends 'common_code/base.html'%} 
+{% load static %}
 {%block title%}Blog{%endblock title%}
 
 {%block content%} 
@@ -7,33 +9,33 @@
 
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 1">
+                <img src="{%static 'images/blog1.jpeg'%}" class="card-img-top" alt="Blog Image 1">
                 <div class="card-body">
                     <h5 class="card-title">The Future of Web Design</h5>
                     <p class="card-text">Explore how design trends are shaping the future of websites in 2025 and beyond.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    <a href="{% url 'blog_more1' %}" class="btn btn-outline-primary btn-sm">Read More</a>
                 </div>
             </div>
         </div>
 
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 2">
+                <img src="{%static 'images/blog2.jpeg'%}" class="card-img-top" alt="Blog Image 2">
                 <div class="card-body">
                     <h5 class="card-title">Boost Your SEO in 2025</h5>
                     <p class="card-text">Learn practical strategies to enhance your website's visibility and search engine ranking.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    <a href="{% url 'blog_more2' %}" class="btn btn-outline-primary btn-sm">Read More</a>
                 </div>
             </div>
         </div>
 
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog Image 3">
+                <img src="{%static 'images/blog3.png'%}" class="card-img-top" alt="Blog Image 3">
                 <div class="card-body">
                     <h5 class="card-title">Mastering JavaScript</h5>
                     <p class="card-text">A comprehensive guide for developers to sharpen their JavaScript skills for modern projects.</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                    <a href="{% url 'blog_more3' %}" class="btn btn-outline-primary btn-sm">Read More</a>
                 </div>
             </div>
         </div>
