@@ -1,0 +1,12 @@
+{%extends 'common_code/base.html'%} 
+{% comment %} {% load static %} {% endcomment %}
+{%block title%}World Map{%endblock title%}
+{% block carosel %}{% endblock %}  <!-- This skips the sidebar -->
+
+{%block content%} 
+     <h2>World Map</h2>
+    <div>
+        {{ map_html|safe }}
+    </div>
+{%endblock content%}
+
