@@ -1,0 +1,41 @@
+{% extends 'common_code/base.html' %}
+
+{% block title %}Student Details{% endblock title %}
+
+{% block carosel %}{% endblock %}  <!-- This skips the sidebar -->
+
+{% block content %}
+  {% if std %}
+    <div class="container my-5">
+        <h2 class="mb-4">Student Information</h2>
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID#</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Batch</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in std %}
+                <tr>
+                    <td>{{ s.id }}</td>
+                    <td>{{ s.student_id }}</td>
+                    <td>{{ s.student_name }}</td>
+                    <td>{{ s.student_email }}</td>
+                    <td>{{ s.batch }}</td>
+                    <td>{{ s.course }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+  {% else %}
+    <div class="container my-5">
+        <h4 class="text-center text-muted">No student data found.</h4>
+    </div>
+  {% endif %}
+{% endblock content %}
