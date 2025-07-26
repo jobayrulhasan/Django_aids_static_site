@@ -1,0 +1,7 @@
+<form method="POST">
+    {% csrf_token %}
+    <h2>Student Form</h2>
+    <p>Please fill out the form below:</p>
+     {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>

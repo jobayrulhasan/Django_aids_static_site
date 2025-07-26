@@ -1,6 +1,6 @@
 from django.shortcuts import render
-import plotly.express as px
-import pandas as pd
+from .forms import StudentForm
+
 
 # Main blog pages
 def blog(request):
@@ -16,28 +16,15 @@ def blog_more3(request):
     return render(request, 'blog/blogmore3.html')
 
 
-
-# Global map view using Plotly
-def map_view(request):
-    # Sample city data for demonstration
-    df = pd.DataFrame({
-        'City': ['London', 'New York', 'Tokyo'],
-        'Latitude': [51.5074, 40.7128, 35.6762],
-        'Longitude': [-0.1278, -74.0060, 139.6503],
-    })
-
-    # Create the Plotly scatter map
-    fig = px.scatter_geo(
-        df,
-        lat='Latitude',
-        lon='Longitude',
-        text='City',
-        projection='natural earth',
-        title='World Cities'
-    )
-    
-    # Convert Plotly figure to HTML
-    map_html = fig.to_html(full_html=False)
-
-    # Pass it to the template
-    return render(request, 'blog/map.html', {'map_html': map_html})
+def show_form(request):
+    if request.method == 'POST':
+        frm = StudentForm(request.POST)
+        # print("Form submitted with data:", frm.data)
+        print("POST request received")
+        if frm.is_valid():
+            print("Form is valid")
+            print("Form data:", frm.cleaned_data)
+    else:
+        frm = StudentForm()  # Initialize an empty form for GET requests
+        print("GET request received")
+    return render(request, 'blog/form.html', {'form': frm})
