@@ -1,0 +1,25 @@
+<title>user creation</title>
+<dody>
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        <table>
+            {% for field in form %}
+                <tr>
+                    <th>{{ field.label_tag }}</th>
+                    <td>{{ field }}</td>
+                    <td>
+                        {% if field.errors %}
+                            <ul class="errorlist">
+                                {% for error in field.errors %}
+                                    <li style="color:red">{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+       </table>
+        <button type="submit">User Create</button>  
+         <a href="{% url 'user_login' %}">Login</a>
+    </form>
+</body>
