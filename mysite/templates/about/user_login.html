@@ -2,6 +2,14 @@
 <dody>
     <form method="POST" novalidate>
         {% csrf_token %}
+          <!-- Display non-field errors -->
+        {% if form.non_field_errors %}
+            <ul class="errorlist">
+                {% for error in form.non_field_errors %}
+                    <li style="color:red">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
         <table>
             {% for field in form %}
                 <tr>
@@ -20,6 +28,6 @@
             {% endfor %}
        </table>
         <button type="submit">Login</button>  
-         <a href="{% url 'user_login' %}">Logout</a>
+         <a href="{% url 'user_creation_form' %}">Registration</a>
     </form>
 </body>
