@@ -3,8 +3,7 @@ from .models import Student
 # django default forms
 from .forms import userCreate
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 
 # Create your views here.
 def about(request):
