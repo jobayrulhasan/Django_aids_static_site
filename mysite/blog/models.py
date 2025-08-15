@@ -9,8 +9,20 @@ class teacher(models.Model):
     teacher_reg = models.CharField(max_length=100)
     
 
-# manay to many relationship
+# manay to one relationship
 class student(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     student_name = models.CharField(max_length=100)
     student_reg = models.CharField(max_length=100)
+    
+    
+
+# manay to many relationship
+class course(models.Model):
+    user = models.ManyToManyField(User)
+    course_name = models.CharField(max_length=100)
+    course_reg = models.IntegerField()
+    
+    
+    def course_teacher(self):
+        return ', '.join([str(p) for p in self.user.all()])
